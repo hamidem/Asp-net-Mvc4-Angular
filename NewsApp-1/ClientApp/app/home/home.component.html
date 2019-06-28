@@ -1,0 +1,691 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+<div class="w3-content" style="max-width:1400px">
+    <div class="w3-row" *ngIf="articles">
+
+        <div class="w3-col l4">
+            <div class="w3-card w3-margin w3-margin-top">
+                <div style="text-align:center;">
+                    <label>Recherche</label>
+                    <input type="text" [(ngModel)]="term">
+                </div>
+                <br />
+                <div *ngIf="term">
+                    <div *ngFor="let article of articles |filter:term">
+                        <div class="w3-container">
+                            <a href="{{ article.Link }}" target="_blank">
+                                <h5>
+                                    {{ article.Title }}<br />
+                                    <span class="w3-opacity">
+                                        {{ article.Media_name }} . {{ article.Published }}
+                                    </span>
+                                </h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <ul class="w3-ul w3-hoverable w3-white">
+                    <li class="w3-padding-16">
+                        <a href="{{ articles[32].Link }}">
+                            <img src="{{ articles[32].Image_url }}" />
+                            <span class="w3-large">
+                                {{ articles[32].Title }}<br />
+                                <span class="w3-opacity">
+                                    {{ articles[32].Media_name }} .
+                                    <span style="font-size:small">
+                                        {{ articles[32].Published }}
+                                    </span>
+                                </span>
+                            </span><br>
+                        </a>
+                    </li>
+                    <li class="w3-padding-16">
+                        <a href="{{ articles[33].Link }}">
+                            <img src="{{ articles[33].Image_url }}" />
+                            <span class="w3-large">
+                                {{ articles[33].Title }}<br />
+                                <span class="w3-opacity">
+                                    {{ articles[33].Media_name }} .
+                                    <span style="font-size:small">
+                                        {{ articles[33].Published }}
+                                    </span>
+                                </span>
+                            </span><br>
+                        </a>
+                    </li>
+                    <li class="w3-padding-16">
+                        <a href="{{ articles[34].Link }}">
+                            <img src="{{ articles[34].Image_url }}" />
+                            <span class="w3-large">
+                                {{ articles[34].Title }}<br />
+                                <span class="w3-opacity">
+                                    {{ articles[34].Media_name }} .
+                                    <span style="font-size:small">
+                                        {{ articles[34].Published }}
+                                    </span>
+                                </span>
+                            </span><br>
+                        </a>
+                    </li>
+                    <li class="w3-padding-16">
+                        <a href="{{ articles[35].Link }}">
+                            <img src="{{ articles[25].Image_url }}" />
+                            <span class="w3-large">
+                                {{ articles[35].Title }}<br />
+                                <span class="w3-opacity">
+                                    {{ articles[25].Media_name }} .
+                                    <span style="font-size:small">
+                                        {{ articles[25].Published }}
+                                    </span>
+                                </span>
+                            </span><br>
+                        </a>
+                    </li>
+                    <li class="w3-padding-16">
+                        <a href="{{ articles[36].Link }}">
+                            <img src="{{ articles[36].Image_url }}" />
+                            <span class="w3-large">
+                                {{ articles[36].Title }}<br />
+                                <span class="w3-opacity">
+                                    {{ articles[36].Media_name }} .
+                                    <span style="font-size:small">
+                                        {{ articles[36].Published }}
+                                    </span>
+                                </span>
+                            </span><br>
+                        </a>
+                    </li>
+                    <li class="w3-padding-16">
+                        <a href="{{ articles[37].Link }}">
+                            <img src="{{ articles[37].Image_url }}" />
+                            <span class="w3-large">
+                                {{ articles[37].Title }}<br />
+                                <span class="w3-opacity">
+                                    {{ articles[37].Media_name }} .
+                                    <span style="font-size:small">
+                                        {{ articles[37].Published }}
+                                    </span>
+                                </span>
+                            </span><br>
+                        </a>
+                    </li>
+                    <li class="w3-padding-16">
+                        <a href="{{ articles[38].Link }}">
+                            <img src="{{ articles[38].Image_url }}" />
+                            <span class="w3-large">
+                                {{ articles[38].Title }}<br />
+                                <span class="w3-opacity">
+                                    {{ articles[38].Media_name }} .
+                                    <span style="font-size:small">
+                                        {{ articles[38].Published }}
+                                    </span>
+                                </span>
+                            </span><br>
+                        </a>
+                    </li>
+                    <li class="w3-padding-16">
+                        <a href="{{ articles[39].Link }}">
+                            <img src="{{ articles[39].Image_url }}" />
+                            <span class="w3-large">
+                                {{ articles[39].Title }}<br />
+                                <span class="w3-opacity">
+                                    {{ articles[39].Media_name }} .
+                                    <span style="font-size:small">
+                                        {{ articles[39].Published }}
+                                    </span>
+                                </span>
+                            </span><br>
+                        </a>
+                    </li>
+                    <li class="w3-padding-16">
+                        <a href="{{ articles[40].Link }}">
+                            <img src="{{ articles[40].Image_url }}" />
+                            <span class="w3-large">
+                                {{ articles[40].Title }}<br />
+                                <span class="w3-opacity">
+                                    {{ articles[40].Media_name }} .
+                                    <span style="font-size:small">
+                                        {{ articles[40].Published }}
+                                    </span>
+                                </span>
+                            </span><br>
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+
+        <div class="w3-col l8 s12">
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-card">
+                    <div class="w3-row">
+                        <div class="w3-col m12">
+                            <div class="w3-col m6 s12">
+                                <section class="section-white">
+                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                        </ol>
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner my-carousel-inner">
+                                            <div class="item active my-carousel-item">
+                                                <div class="w3-container">
+                                                    <img src="{{ articles[0].Image_url }}" />
+                                                </div>
+                                                <div class="carousel-caption">
+                                                    <h4>
+                                                        {{  articles[0].Title }}<br />
+                                                    </h4>
+                                                    <span class="w3-opacity">
+                                                        {{ articles[0].Media_name }} . {{  articles[0].Published }}
+                                                    </span>
+                                                    <a class="w3-button" href="{{ articles[0].Link}}" target="_blank">Lire....</a>
+                                                </div>
+                                            </div>
+                                            <div class="item my-carousel-item">
+                                                <div class="w3-container">
+                                                    <img src="{{ articles[1].Image_url }}" />
+                                                </div>
+                                                <div class="carousel-caption">
+                                                    <h4>
+                                                        {{  articles[1].Title }}<br />
+                                                    </h4>
+                                                    <span class="w3-opacity">
+                                                        {{ articles[1].Media_name }} . {{  articles[1].Published }}
+                                                    </span>
+                                                    <a class="w3-button" href="{{ articles[1].Link}}" target="_blank">Lire....</a>
+                                                </div>
+                                            </div>
+                                            <div class="item my-carousel-item">
+                                                <div class="w3-container">
+                                                    <img src="{{ articles[2].Image_url }}" />
+                                                </div>
+                                                <div class="carousel-caption">
+                                                    <h4>
+                                                        {{  articles[2].Title }}<br />
+                                                    </h4>
+                                                    <span class="w3-opacity">
+                                                        {{ articles[2].Media_name }} . {{  articles[2].Published }}
+                                                    </span>
+                                                    <a class="w3-button" href="{{ articles[2].Link}}" target="_blank">Lire....</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <div class="w3-col m6 s12">
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <img src="{{ articles[3].Image_url }}" />
+                                        <h5>
+                                            {{ articles[3].Title }}<br />
+                                            <span class="w3-opacity">
+                                                {{ articles[3].Media_name }}<span style="font-size:small"> . {{ articles[3].Published }}
+                                            </span> </span>
+                                        </h5>
+                                        <div class="w3-row">
+                                            <div class="w3-col m8 s12">
+                                                <p><a href="{{ articles[3].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <img src="{{ articles[4].Image_url }}" />
+                                        <h5>
+                                            {{ articles[4].Title }}<br />
+                                            <span class="w3-opacity">
+                                                {{ articles[4].Media_name }}<span style="font-size:small"> . {{ articles[4].Published }}
+                                            </span> </span>
+                                        </h5>
+                                        <div class="w3-row">
+                                            <div class="w3-col m8 s12">
+                                                <p><a href="{{ articles[4].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-card">
+                    <div class="w3-row">
+                        <div class="w3-col m12">
+                            <div class="w3-col m6 s12">
+                                <div class="w3-container">
+                                    <img src="{{ articles[6].Image_url }}" />
+                                    <h5>
+                                        {{ articles[6].Title }}<br />
+                                        <span class="w3-opacity">
+                                            {{ articles[6].Media_name }}<span style="font-size:small"> . {{ articles[6].Published }}
+                                        </span> </span>
+                                    </h5>
+                                    {{ articles[6].Description }}
+                                    <div class="w3-row">
+                                        <div class="w3-col m8 s12">
+                                            <p><a href="{{ articles[6].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 s12">
+                                <div class="w3-container">
+                                    <img src="{{ articles[7].Image_url }}" />
+                                    <h5>
+                                        {{ articles[7].Title }}<br />
+                                        <span class="w3-opacity">
+                                            {{ articles[7].Media_name }}<span style="font-size:small"> . {{ articles[7].Published }}
+                                        </span> </span>
+                                    </h5>
+                                    {{ articles[7].Description }}
+                                    <div class="w3-row">
+                                        <div class="w3-col m8 s12">
+                                            <p><a href="{{ articles[7].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-card">
+                    <div class="w3-row">
+                        <div class="w3-col m12">
+                            <div class="w3-col m6 s12">
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <div class="w3-container">
+                                            <img src="{{ articles[8].Image_url }}" />
+                                            <h5>
+                                                {{ articles[8].Title }}<br />
+                                                <span class="w3-opacity">
+                                                    {{ articles[8].Media_name }}<span style="font-size:small"> . {{ articles[8].Published }}
+                                                </span> </span>
+                                            </h5>
+                                            <div class="w3-row">
+                                                <div class="w3-col m8 s12">
+                                                    <p><a href="{{ articles[8].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <div class="w3-container">
+                                            <img src="{{ articles[9].Image_url }}" />
+                                            <h5>
+                                                {{ articles[9].Title }}<br />
+                                                <span class="w3-opacity">
+                                                    {{ articles[9].Media_name }}<span style="font-size:small"> . {{ articles[9].Published }}
+                                                </span> </span>
+                                            </h5>
+                                            <div class="w3-row">
+                                                <div class="w3-col m8 s12">
+                                                    <p><a href="{{ articles[9].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 s12">
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <div class="w3-container">
+                                            <img src="{{ articles[11].Image_url }}" />
+                                            <h5>
+                                                {{ articles[11].Title }}<br />
+                                                <span class="w3-opacity">
+                                                    {{ articles[11].Media_name }}<span style="font-size:small"> . {{ articles[11].Published }}
+                                                </span> </span>
+                                            </h5>
+                                            <div class="w3-row">
+                                                <div class="w3-col m8 s12">
+                                                    <p><a href="{{ articles[11].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <div class="w3-container">
+                                            <img src="{{ articles[12].Image_url }}" />
+                                            <h5>
+                                                {{ articles[12].Title }}<br />
+                                                <span class="w3-opacity">
+                                                    {{ articles[11].Media_name }}<span style="font-size:small"> . {{ articles[12].Published }}
+                                                </span> </span>
+                                            </h5>
+                                            <div class="w3-row">
+                                                <div class="w3-col m8 s12">
+                                                    <p><a href="{{ articles[12].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-card">
+                    <div class="w3-row">
+                        <div class="w3-col m12">
+                            <div class="w3-col m6 s12">
+                                <div class="w3-container">
+                                    <div class="w3-container">
+                                        <img src="{{ articles[14].Image_url }}" />
+                                        <h5>
+                                            {{ articles[14].Title }}<br />
+                                            <span class="w3-opacity">
+                                                {{ articles[14].Media_name }}<span style="font-size:small"> . {{ articles[14].Published }}
+                                            </span> </span>
+                                        </h5>
+                                        <div class="w3-row">
+                                            <div class="w3-col m8 s12">
+                                                <p><a href="{{ articles[14].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 s12">
+                                <div class="w3-container">
+                                    <div class="w3-container">
+                                        <img src="{{ articles[15].Image_url }}" />
+                                        <h5>
+                                            {{ articles[15].Title }}<br />
+                                            <span class="w3-opacity">
+                                                {{ articles[15].Media_name }}<span style="font-size:small"> . {{ articles[15].Published }}
+                                            </span> </span>
+                                        </h5>
+                                        <div class="w3-row">
+                                            <div class="w3-col m8 s12">
+                                                <p><a href="{{ articles[15].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-card">
+                    <div class="w3-row">
+                        <div class="w3-col m12">
+                            <div class="w3-col m6 s12">
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <div class="w3-container">
+                                            <img src="{{ articles[16].Image_url }}" />
+                                            <h5>
+                                                {{ articles[16].Title }}<br />
+                                                <span class="w3-opacity">
+                                                    {{ articles[16].Media_name }}<span style="font-size:small"> . {{ articles[16].Published }}
+                                                </span> </span>
+                                            </h5>
+                                            <div class="w3-row">
+                                                <div class="w3-col m8 s12">
+                                                    <p><a href="{{ articles[16].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <img src="{{ articles[17].Image_url }}" />
+                                        <h5>
+                                            {{ articles[17].Title }}<br />
+                                            <span class="w3-opacity">
+                                                {{ articles[17].Media_name }}<span style="font-size:small"> . {{ articles[17].Published }}
+                                            </span> </span>
+                                        </h5>
+                                        <div class="w3-row">
+                                            <div class="w3-col m8 s12">
+                                                <p><a href="{{ articles[17].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 s12">
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <img src="{{ articles[19].Image_url }}" />
+                                        <h5>
+                                            {{ articles[19].Title }}<br />
+                                            <span class="w3-opacity">
+                                                {{ articles[19].Media_name }}<span style="font-size:small"> . {{ articles[19].Published }}
+                                            </span> </span>
+                                        </h5>
+                                        <div class="w3-row">
+                                            <div class="w3-col m8 s12">
+                                                <p><a href="{{ articles[19].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <img src="{{ articles[20].Image_url }}" />
+                                        <h5>
+                                            {{ articles[20].Title }}<br />
+                                            <span class="w3-opacity">
+                                                {{ articles[20].Media_name }}<span style="font-size:small"> . {{ articles[20].Published }}
+                                            </span> </span>
+                                        </h5>
+                                        <div class="w3-row">
+                                            <div class="w3-col m8 s12">
+                                                <p><a href="{{ articles[20].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-card">
+                    <div class="w3-row">
+                        <div class="w3-col m12">
+                            <div class="w3-col m6 s12">
+                                <div class="w3-container">
+                                    <img src="{{ articles[22].Image_url }}" />
+                                    <h5>
+                                        {{ articles[22].Title }}<br />
+                                        <span class="w3-opacity">
+                                            {{ articles[22].Media_name }}<span style="font-size:small"> . {{ articles[22].Published }}
+                                        </span> </span>
+                                    </h5>
+                                    {{ articles[22].Description }}
+                                    <div class="w3-row">
+                                        <div class="w3-col m8 s12">
+                                            <p><a href="{{ articles[22].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 s12">
+                                <div class="w3-container">
+                                    <img src="{{ articles[23].Image_url }}" />
+                                    <h5>
+                                        {{ articles[23].Title }}<br />
+                                        <span class="w3-opacity">
+                                            {{ articles[23].Media_name }}<span style="font-size:small"> . {{ articles[23].Published }}
+                                        </span> </span>
+                                    </h5>
+                                    {{ articles[23].Description }}
+                                    <div class="w3-row">
+                                        <div class="w3-col m8 s12">
+                                            <p><a href="{{ articles[23].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-card">
+                    <div class="w3-row">
+                        <div class="w3-col m12">
+                            <div class="w3-col m6 s12">
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <div class="w3-container">
+                                            <img src="{{ articles[24].Image_url }}" />
+                                            <h5>
+                                                {{ articles[24].Title }}<br />
+                                                <span class="w3-opacity">
+                                                    {{ articles[24].Media_name }}<span style="font-size:small"> . {{ articles[24].Published }}
+                                                </span> </span>
+                                            </h5>
+                                            <div class="w3-row">
+                                                <div class="w3-col m8 s12">
+                                                    <p><a href="{{ articles[24].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <img src="{{ articles[25].Image_url }}" />
+                                        <h5>
+                                            {{ articles[25].Title }}<br />
+                                            <span class="w3-opacity">
+                                                {{ articles[25].Media_name }}<span style="font-size:small"> . {{ articles[25].Published }}
+                                            </span> </span>
+                                        </h5>
+                                        <div class="w3-row">
+                                            <div class="w3-col m8 s12">
+                                                <p><a href="{{ articles[25].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 s12">
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <img src="{{ articles[27].Image_url }}" />
+                                        <h5>
+                                            {{ articles[27].Title }}<br />
+                                            <span class="w3-opacity">
+                                                {{ articles[27].Media_name }}<span style="font-size:small"> . {{ articles[27].Published }}
+                                            </span> </span>
+                                        </h5>
+                                        <div class="w3-row">
+                                            <div class="w3-col m8 s12">
+                                                <p><a href="{{ articles[27].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w3-col m6 s12">
+                                    <div class="w3-container">
+                                        <img src="{{ articles[28].Image_url }}" />
+                                        <h5>
+                                            {{ articles[28].Title }}<br />
+                                            <span class="w3-opacity">
+                                                {{ articles[28].Media_name }}<span style="font-size:small"> . {{ articles[28].Published }}
+                                            </span> </span>
+                                        </h5>
+                                        <div class="w3-row">
+                                            <div class="w3-col m8 s12">
+                                                <p><a href="{{ articles[28].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-card">
+                    <div class="w3-row">
+                        <div class="w3-col m12">
+                            <div class="w3-col m6 s12">
+                                <div class="w3-container">
+                                    <img src="{{ articles[30].Image_url }}" />
+                                    <h5>
+                                        {{ articles[30].Title }}<br />
+                                        <span class="w3-opacity">
+                                            {{ articles[30].Media_name }}<span style="font-size:small"> . {{ articles[30].Published }}
+                                        </span> </span>
+                                    </h5>
+                                    {{ articles[30].Description }}
+                                    <div class="w3-row">
+                                        <div class="w3-col m8 s12">
+                                            <p><a href="{{ articles[30].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 s12">
+                                <div class="w3-container">
+                                    <img src="{{ articles[31].Image_url }}" />
+                                    <h5>
+                                        {{ articles[31].Title }}<br />
+                                        <span class="w3-opacity">
+                                            {{ articles[31].Media_name }}<span style="font-size:small"> . {{ articles[31].Published }}
+                                        </span> </span>
+                                    </h5>
+                                    {{ articles[31].Description }}
+                                    <div class="w3-row">
+                                        <div class="w3-col m8 s12">
+                                            <p><a href="{{ articles[31].Link }}" class="w3-button w3-padding-large w3-white w3-border" target="_blank">Lire....</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

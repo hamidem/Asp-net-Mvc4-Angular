@@ -1,0 +1,72 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+<div *ngIf="articles">
+    <div class="article-title">
+        {{ categorie }}
+        <br />
+        <h3>{{ articles[0].Media_name }}</h3>
+    </div>
+
+    <div class="row" style="padding-left:5px;">
+
+        <div class="container col-sm-3">
+            <div style="text-align:center;">
+                <label>Recherche</label>
+                <input type="text" [(ngModel)]="term">
+            </div>
+            <br />
+            <div *ngIf="term">
+                <div *ngFor="let article of articles |filter:term">
+                    <a href="{{ article.Link }}" target="_blank">
+                        <h5>
+                            {{ article.Title }}
+                            <span class="w3-opacity">
+                                {{ article.Published }}
+                            </span>
+                        </h5>
+                    </a>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="col-sm-5">
+                <a href="{{ articles[0].Link }}" target="_blank ">
+                    <div class="single-blog-post featured-post">
+                        <div class="post-thumb">
+                            <img src="{{ articles[0].Image_url }}" alt="">
+                        </div>
+                        <div class="post-data">
+                            <div class="post-title">
+                                <h6>{{ articles[0].Title }}</h6>
+                            </div>
+                            <div class="post-meta">
+                                <p class="post-author">{{ articles[0].Media_name }} <span>{{ articles[0].Published }}</span>
+                                <p class="post-excerp">{{ articles[0].Description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div *ngFor="let article of articles | slice: 1">
+                <div class="col-sm-3">
+                    <a href="{{ article.Link }}" target="_blank ">
+                        <div class="single-blog-post featured-post">
+                            <div class="post-thumb">
+                                <img src="{{ article.Image_url }}" alt="">
+                            </div>
+                            <div class="post-data">
+                                <div class="post-title">
+                                    <h6>{{ article.Title }}</h6>
+                                </div>
+                                <div class="post-meta">
+                                    <p class="post-author">{{ article.Media_name }}  <span>{{ article.Published }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
