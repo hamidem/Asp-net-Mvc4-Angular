@@ -29,4 +29,4 @@ Downloading this repo and unzip it, then follow the next instructions to configu
 
     - Run
     
-Screen shot (https://raw.githubusercontent.com/hamidem/Asp-net-Mvc4-Angular/master/Capture.PNG)
+Screen shot ()
